@@ -4,16 +4,16 @@ import { useRef, useState } from 'react';
 function App() {
 
   const [currentMusicDetails, setcurrentMusicDetails] = useState({
-    songName: 'Chasing',
-    songArtist: 'NEFFEX',
-    songSrc: './Assets/songs/Chasing - NEFFEX.mp3',
-    songAvatar: './Assets/Images/image1.jpg'
+    songName: 'Te Amo',
+    songArtist: 'Pritam',
+    songSrc: './Assets/songs/te amo.mp3',
+    songAvatar: './Assets/Images/mimage1.jpg'
   })
   //useStates variable
   const [audioProgress, setaudioProgress] = useState(0);
   const [IsAudioPlaying, setIsAudioPlaying] = useState(false)
   const [musicIndex, setmusicIndex] = useState(0);
-  const [musicTotalLength, setmusicTotalLength] = useState('04 : 38');
+  const [musicTotalLength, setmusicTotalLength] = useState('04 : 46');
   const [musicCurrentTime, setmusicCurrentTime] = useState('00 : 00');
   const [videoIndex, setvideoIndex] = useState(0)
 
@@ -51,40 +51,46 @@ function App() {
 
   const musicAPI = [
     {
-      songName: 'Chasing',
-      songArtist: 'NEFFEX',
-      songSrc: './Assets/songs/Chasing - NEFFEX.mp3',
-      songAvatar: './Assets/Images/image1.jpg'
+      songName: 'Te Amo',
+      songArtist: 'Pritam',
+      songSrc: './Assets/songs/te amo.mp3',
+      songAvatar: './Assets/Images/mimage1.jpg'
     },
     {
-      songName: 'Catch Me If I Fall',
-      songArtist: 'TEGNENT',
-      songSrc: './Assets/songs/Catch Me If I Fall - NEFFEX.mp3',
-      songAvatar: './Assets/Images/image2.jpg'
+      songName: 'Adore You',
+      songArtist: 'Prabh Gill',
+      songSrc: './Assets/songs/adore you.mp3',
+      songAvatar: './Assets/Images/mimage2.jpg'
     },
     {
-      songName: 'Inspired (Clean)',
-      songArtist: 'NEFFEX',
-      songSrc: './Assets/songs/Inspired (Clean) - NEFFEX.mp3',
-      songAvatar: './Assets/Images/image3.jpg'
+      songName: 'Bade Ache Lagte Hai',
+      songArtist: 'Amit Kumar',
+      songSrc: './Assets/songs/bade ache lagte hai.mp3',
+      songAvatar: './Assets/Images/mimage3.jpg'
     },
     {
-      songName: 'AURORA',
-      songArtist: 'Aurora',
-      songSrc: './Assets/songs/AURORA - Runaway (Lyrics).mp3',
-      songAvatar: './Assets/Images/image4.jpg'
+      songName: 'Hass Hass',
+      songArtist: 'Diljit Dosanjh',
+      songSrc: './Assets/songs/hass hass.mp3',
+      songAvatar: './Assets/Images/mimage4.jpg'
     },
     {
-      songName: 'Soch (Slowed+Reverbed)',
-      songArtist: 'Hardy Sandhu',
-      songSrc: './Assets/songs/SOCH(Slowed+Reverbed) __ Hardy Sandhu.webm',
-      songAvatar: './Assets/Images/image6.jpg'
+      songName: 'Ishq',
+      songArtist: 'Amir ameer',
+      songSrc: './Assets/songs/ishq likhu.mp3',
+      songAvatar: './Assets/Images/mimage5.jpg'
     },
     {
-      songName: 'Apna Bana Le',
-      songArtist: 'Arijit Singh',
-      songSrc: './Assets/songs/Apna Bana Le - Full Audio _ Bhediya _ Varun Dhawan, Kriti Sanon_ Sachin-Jigar,Arijit Singh,Amitabh B.webm',
-      songAvatar: './Assets/Images/image7.jpg'
+      songName: 'Meri Jaan',
+      songArtist: 'Neeti Mohan',
+      songSrc: './Assets/songs/meri jaan.mp3',
+      songAvatar: './Assets/Images/mimage6.jpg'
+    },
+    {
+      songName: 'To The Stars',
+      songArtist: 'Prophec',
+      songSrc: './Assets/songs/to the stars.mp3',
+      songAvatar: './Assets/Images/mimage7.jpg'
     }
   ]
 
@@ -147,11 +153,11 @@ function App() {
     setaudioProgress(isNaN(progress) ? 0 : progress)
   }
 
-  const vidArray = ['./Assets/Videos/video1.mp4', './Assets/Videos/video2.mp4',
-    './Assets/Videos/video3.mp4', './Assets/Videos/video4.mp4', './Assets/Videos/video5.mp4']
+  const vidArray = ['./Assets/Videos/video6.mp4', './Assets/Videos/video4.mp4',
+    './Assets/Videos/video3.mp4', './Assets/Videos/video2.mp4', './Assets/Videos/video1.mp4', './Assets/Videos/video5.mp4']
 
   const handleChangeBackground = () => {
-    if (videoIndex > vidArray.length - 1) {
+    if (videoIndex >= vidArray.length - 1) {
       setvideoIndex(0);
     }
     else {
@@ -162,7 +168,7 @@ function App() {
   return (
     <>
       <div className='container'>
-        <audio src='./Assets/songs/Chasing - NEFFEX.mp3' ref={currentAudio} onEnded={handleNextSong} onTimeUpdate={handleAudioUpdate}></audio>
+        <audio src='./Assets/songs/te amo.mp3' ref={currentAudio} onEnded={handleNextSong} onTimeUpdate={handleAudioUpdate}></audio>
         <video src={vidArray[videoIndex]} autoPlay muted loop
           className='backgroundVideo'></video>
         <div className='blackScreen'></div>
