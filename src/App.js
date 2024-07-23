@@ -153,7 +153,7 @@ function App() {
     setaudioProgress(isNaN(progress) ? 0 : progress)
   }
 
-  const vidArray = ['./Assets/Videos/video6.mp4', './Assets/Videos/video4.mp4',
+  const vidArray = ['./Assets/Videos/videos6.mp4', './Assets/Videos/video4.mp4',
     './Assets/Videos/video3.mp4', './Assets/Videos/video2.mp4', './Assets/Videos/video1.mp4', './Assets/Videos/video5.mp4']
 
   const handleChangeBackground = () => {
